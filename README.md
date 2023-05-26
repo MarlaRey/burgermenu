@@ -1,2 +1,2 @@
 # burgermenu
-Jeg laver en burgermenu
+alt koden er i htmllen, men er opdelt i style og script
