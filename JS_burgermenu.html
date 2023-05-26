@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burgermenu</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <style>
+    /* CSS burgermenu */
+    nav {
+      background-color: #333;
+      padding: 1rem 0;
+
+    }
+    nav ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+    }
+    nav ul li {
+      padding: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+    #menuList {
+      background-color: #333;
+    }
+    #menuList ul {
+      list-style: none;
+    }
+    #menuList ul li {
+      color: #333;
+      padding-top: 2rem;
+    }
+    #menuList ul li a {
+      text-decoration: none;
+      color: antiquewhite;
+    }
+    #menuList ul li a:hover {
+      text-decoration: underline;
+    }
+    #burgerMenu {
+      justify-content: flex-end;
+      display: none;
+      color: antiquewhite;
+      padding: 0 1rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 700px) {
+      nav ul {
+        display: none;
+      }
+      #burgerMenu {
+        display: flex;
+      }
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    }
+
+    #menuList {
+      display: flex;
+      flex-direction: column;
+      height: 85vh;
+      align-items: center;
+      justify-content: top;
+      display: none;
+    }
+
+    #menuList.active {
+      display: flex;
+    }
+  </style>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+        </ul>
+        <div id="burgerMenu">
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
+      </nav>
+
+      <div id="menuList">
+        <ul>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+        </ul>
+      </div>
+    </header>
+    <script>
+      const burgermenu = document.getElementById("burgermenu");
+      const menuList = document.getElementById("menuList");
+
+      burgerMenu.addEventListener("click", () => {
+        menuList.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
